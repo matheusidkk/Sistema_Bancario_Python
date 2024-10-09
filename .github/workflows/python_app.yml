@@ -21,10 +21,5 @@ jobs:
         with:
           python-version: '3.12.6'
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt  # Se você tiver um arquivo de requisitos
-
       - name: Run your code
         run: python Sistema_bancario.py
