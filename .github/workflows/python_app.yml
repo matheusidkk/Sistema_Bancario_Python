@@ -13,17 +13,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.12.6'  # ou a versão que você estiver usando
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12.6'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # Se você tiver um arquivo de requisitos
 
-    - name: Run your code
-      run: python Sistema_bancario.py
+      - name: Run your code
+        run: python Sistema_bancario.py
